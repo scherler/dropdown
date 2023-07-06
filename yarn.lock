@@ -2094,19 +2094,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dropdown@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "dropdown@workspace:."
-  dependencies:
-    "@material/mwc-icon": ^0.27.0
-    "@parcel/core": ^2.9.3
-    lit: ^2.7.6
-    parcel: ^2.9.3
-    sirocco-wc: ^1.1.10
-    wireit: ^0.9.5
-  languageName: unknown
-  linkType: soft
-
 "eastasianwidth@npm:^0.2.0":
   version: 0.2.0
   resolution: "eastasianwidth@npm:0.2.0"
@@ -4127,6 +4114,19 @@ __metadata:
   checksum: cab8f25ae6f1434abee8d80023d7e72b598cf1327164ddab31003c51215526801e40b66c5e65d658a0af1e9d6478cadcb4c745f4bd6751f97d8644786c0978b0
   languageName: node
   linkType: hard
+
+"scherler-dropdown@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "scherler-dropdown@workspace:."
+  dependencies:
+    "@material/mwc-icon": ^0.27.0
+    "@parcel/core": ^2.9.3
+    lit: ^2.7.6
+    parcel: ^2.9.3
+    sirocco-wc: ^1.1.10
+    wireit: ^0.9.5
+  languageName: unknown
+  linkType: soft
 
 "semver@npm:^7.3.5, semver@npm:^7.5.2":
   version: 7.5.3

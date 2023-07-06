@@ -1,11 +1,15 @@
 {
-  "name": "@scherler/dropdown",
+  "name": "scherler-dropdown",
   "packageManager": "yarn@3.2.4",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:scherler/dropdown.git"
+  },
   "scripts": {
     "build": "wireit",
     "build:bundle": "wireit",
@@ -38,12 +42,12 @@
       }
     },
     "start": {
-        "command": "parcel --no-cache index.html",
-        "service": true,
-        "dependencies": [
-          "build:css"
-        ]
-      }
+      "command": "parcel --no-cache index.html",
+      "service": true,
+      "dependencies": [
+        "build:css"
+      ]
+    }
   },
   "devDependencies": {
     "@parcel/core": "^2.9.3",
