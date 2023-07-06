@@ -1,0 +1,58 @@
+{
+  "name": "@scherler/dropdown",
+  "packageManager": "yarn@3.2.4",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "wireit",
+    "build:bundle": "wireit",
+    "build:css": "wireit",
+    "start": "wireit"
+  },
+  "targets": {
+    "jenkins": {
+      "source": "src/index.ts",
+      "distDir": "dist"
+    }
+  },
+  "wireit": {
+    "build": {
+      "command": "yarn build:bundle",
+      "dependencies": [
+        "build:css"
+      ]
+    },
+    "build:bundle": {
+      "command": "parcel build --no-cache --public-url ./ --target jenkins",
+      "output": [
+        "dist/index.js"
+      ]
+    },
+    "build:css": {
+      "command": "sirocco-wc buildCss",
+      "env": {
+        "SWC_CSS": "src/*.css"
+      }
+    },
+    "start": {
+        "command": "parcel --no-cache index.html",
+        "service": true,
+        "dependencies": [
+          "build:css"
+        ]
+      }
+  },
+  "devDependencies": {
+    "@parcel/core": "^2.9.3",
+    "parcel": "^2.9.3",
+    "sirocco-wc": "^1.1.10",
+    "wireit": "^0.9.5"
+  },
+  "dependencies": {
+    "@material/mwc-icon": "^0.27.0",
+    "lit": "^2.7.6"
+  }
+}
